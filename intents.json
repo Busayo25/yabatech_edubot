@@ -2,38 +2,256 @@
   "intents": [
     {
       "tag": "greetings",
-      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening"],
-      "responses": ["Hello! How can I help you at Yabatech today?"]
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good evening",
+        "What's up?",
+        "How are you?",
+        "Is anyone there?",
+        "Good day",
+        "Howdy"
+      ],
+      "responses": [
+        "Hello! How can I help you at Yabatech today?",
+        "Hi there! What would you like to know about Yabatech?",
+        "Greetings! Ask me anything about Yabatech."
+      ]
     },
     {
       "tag": "admission_info",
-      "patterns": ["How do I apply?", "Tell me about admission", "Admission requirements"],
-      "responses": ["Visit https://yabatech.edu.ng/admissions for admission steps and requirements."]
+      "patterns": [
+        "How do I apply?",
+        "Tell me about admission",
+        "Admission requirements",
+        "How can I get admitted?",
+        "When is admission starting?",
+        "Steps to apply for Yabatech",
+        "How to gain admission into Yabatech?",
+        "When is the admission form coming out?",
+        "Can I apply online?",
+        "How much is the admission form?"
+      ],
+      "responses": [
+        "Visit https://yabatech.edu.ng/admissions for admission steps, deadlines, and requirements.",
+        "Admission details are available on the Yabatech website. Check regularly for updates."
+      ]
     },
     {
       "tag": "course_info",
-      "patterns": ["Tell me about ND Computer Science", "HND Civil Engineering"],
-      "responses": ["ND Computer Science is a 2-year program that covers hardware, software, and networks."]
+      "patterns": [
+        "Tell me about ND Computer Science",
+        "HND Civil Engineering",
+        "Courses in Mass Communication",
+        "What courses do you offer?",
+        "Which courses are available?",
+        "List of departments in Yabatech",
+        "What is studied in Mechanical Engineering?",
+        "ND in Office Technology Management",
+        "Can I study Architecture?",
+        "Which science courses are offered?"
+      ],
+      "responses": [
+        "Yabatech offers ND and HND programs across Engineering, Sciences, Arts, and Management. Visit the official site for full course details.",
+        "You can find information on all programs offered on https://yabatech.edu.ng"
+      ]
     },
     {
       "tag": "timetable",
-      "patterns": ["ND II timetable", "When is my next class?"],
-      "responses": ["Visit your department or the Yabatech portal for the most recent schedule."]
+      "patterns": [
+        "ND II timetable",
+        "When is my next class?",
+        "Where can I find my lecture timetable?",
+        "Yabatech timetable",
+        "Timetable for the semester",
+        "When will lectures start?",
+        "How do I access my timetable?",
+        "Where do I check lecture schedule?"
+      ],
+      "responses": [
+        "Visit your department noticeboard or log in to the Yabatech portal for the latest timetable.",
+        "Timetables are usually posted in the department or shared via the student portal."
+      ]
     },
     {
       "tag": "school_fees",
-      "patterns": ["How much is school fee?", "ND I fee"],
-      "responses": ["Check the official Yabatech site for the updated fee breakdown."]
+      "patterns": [
+        "How much is school fee?",
+        "ND I fee",
+        "School fees for HND",
+        "Tuition fees",
+        "Fees for part-time students",
+        "How much do I pay?",
+        "Is there a payment deadline?",
+        "What is the total cost of fees?",
+        "How to pay fees",
+        "Yabatech school fees breakdown"
+      ],
+      "responses": [
+        "Check https://portal.yabatech.edu.ng for the most accurate and updated fee schedule.",
+        "Fees vary by program and level. Log into your portal account to see your payment status."
+      ]
     },
     {
       "tag": "results",
-      "patterns": ["How do I check my results?", "When will results be out?"],
-      "responses": ["Use the student portal at portal.yabatech.edu.ng to check results."]
+      "patterns": [
+        "How do I check my results?",
+        "When will results be out?",
+        "Where can I view my result?",
+        "My result is not showing",
+        "Where to check ND result?",
+        "Result checking portal?",
+        "HND results update",
+        "Exam result access?"
+      ],
+      "responses": [
+        "Use the student portal at https://portal.yabatech.edu.ng to check your results.",
+        "Login with your matric number to view and print your result slip."
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where is Yabatech located?",
+        "Yabatech address",
+        "Yabatech campus location",
+        "How do I get to Yabatech?",
+        "What area is Yabatech?",
+        "Is Yabatech in Lagos?"
+      ],
+      "responses": [
+        "Yaba College of Technology is located in Yaba, Lagos, Nigeria."
+      ]
+    },
+    {
+      "tag": "director_info",
+      "patterns": [
+        "Who is the rector of Yabatech?",
+        "Yabatech rector",
+        "Who heads Yabatech?",
+        "Who is in charge of Yabatech?",
+        "Current director of Yabatech",
+        "Who manages Yabatech?"
+      ],
+      "responses": [
+        "The current Rector of Yaba College of Technology is Dr. Engr. Ibraheem Abdul. (As of 2024)."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How do I contact Yabatech?",
+        "Yabatech email",
+        "Yabatech phone number",
+        "Contact information",
+        "Support line",
+        "Customer care"
+      ],
+      "responses": [
+        "Visit https://yabatech.edu.ng/contact for all official contact numbers and emails.",
+        "You can reach out via the contact form or phone numbers on the Yabatech website."
+      ]
+    },
+    {
+      "tag": "school_portal",
+      "patterns": [
+        "What is the student portal?",
+        "Yabatech portal link",
+        "How do I log into my portal?",
+        "Where can I login?",
+        "Portal login",
+        "School portal web address"
+      ],
+      "responses": [
+        "You can access the student portal at https://portal.yabatech.edu.ng."
+      ]
+    },
+    {
+      "tag": "hostel_info",
+      "patterns": [
+        "Does Yabatech have hostel?",
+        "How do I apply for hostel?",
+        "Hostel fee",
+        "Is there accommodation in school?",
+        "On-campus hostel?",
+        "Can students stay in school hostel?"
+      ],
+      "responses": [
+        "Yes, Yabatech offers hostel accommodation. Check your portal for availability.",
+        "Hostel information is usually available during registration periods on the portal."
+      ]
+    },
+    {
+      "tag": "cut_off_mark",
+      "patterns": [
+        "What is the cut off mark?",
+        "Yabatech cut off mark for ND",
+        "Cut off for Computer Science",
+        "Minimum score for admission",
+        "Is 160 enough for Yabatech?",
+        "JAMB score requirement"
+      ],
+      "responses": [
+        "Yabatech usually accepts a minimum of 150\u2013180 depending on the course. Always confirm on the official site."
+      ]
+    },
+    {
+      "tag": "acceptance_fee",
+      "patterns": [
+        "What is the acceptance fee?",
+        "How much is acceptance?",
+        "When do I pay acceptance?",
+        "Deadline for acceptance fee",
+        "Where to pay acceptance fee?"
+      ],
+      "responses": [
+        "Acceptance fee details are posted after admission on your student portal. Check your dashboard regularly."
+      ]
+    },
+    {
+      "tag": "medicals",
+      "patterns": [
+        "Do I need medicals?",
+        "What documents for medical clearance?",
+        "Where is the medical center?",
+        "Yabatech health requirements",
+        "Health clearance process"
+      ],
+      "responses": [
+        "All new students must undergo medical screening at the college health center. Bring your medical forms and recent test results."
+      ]
+    },
+    {
+      "tag": "course_duration",
+      "patterns": [
+        "How long is ND program?",
+        "HND duration?",
+        "Course length for full-time students",
+        "Is part-time longer?",
+        "Years to complete Computer Science"
+      ],
+      "responses": [
+        "ND and HND programs usually last 2 years each for full-time students."
+      ]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "Goodbye", "Thanks", "Thank you"],
-      "responses": ["You're welcome! Wishing you success at Yabatech."]
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "Thanks",
+        "Thank you",
+        "Talk to you later",
+        "I\u2019m done",
+        "That\u2019s all",
+        "See you"
+      ],
+      "responses": [
+        "You're welcome! Wishing you success at Yabatech.",
+        "Take care! Let me know if you need anything else about Yabatech."
+      ]
     }
   ]
 }
