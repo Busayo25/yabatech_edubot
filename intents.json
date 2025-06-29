@@ -1,0 +1,39 @@
+{
+  "intents": [
+    {
+      "tag": "greetings",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening"],
+      "responses": ["Hello! How can I help you at Yabatech today?"]
+    },
+    {
+      "tag": "admission_info",
+      "patterns": ["How do I apply?", "Tell me about admission", "Admission requirements"],
+      "responses": ["Visit https://yabatech.edu.ng/admissions for admission steps and requirements."]
+    },
+    {
+      "tag": "course_info",
+      "patterns": ["Tell me about ND Computer Science", "HND Civil Engineering"],
+      "responses": ["ND Computer Science is a 2-year program that covers hardware, software, and networks."]
+    },
+    {
+      "tag": "timetable",
+      "patterns": ["ND II timetable", "When is my next class?"],
+      "responses": ["Visit your department or the Yabatech portal for the most recent schedule."]
+    },
+    {
+      "tag": "school_fees",
+      "patterns": ["How much is school fee?", "ND I fee"],
+      "responses": ["Check the official Yabatech site for the updated fee breakdown."]
+    },
+    {
+      "tag": "results",
+      "patterns": ["How do I check my results?", "When will results be out?"],
+      "responses": ["Use the student portal at portal.yabatech.edu.ng to check results."]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "Thanks", "Thank you"],
+      "responses": ["You're welcome! Wishing you success at Yabatech."]
+    }
+  ]
+}
