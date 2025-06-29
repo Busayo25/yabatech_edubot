@@ -16,7 +16,7 @@ with open("vectorizer.pkl", "rb") as f:
     vectorizer = pickle.load(f)
 
 def clean_text(text):
-    tokens = nltk.word_tokenize(text.lower())
+    tokens = text.lower().split()
     return " ".join([stemmer.stem(word) for word in tokens])
 
 def get_response(user_input):
