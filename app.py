@@ -8,10 +8,8 @@ from dotenv import load_dotenv
 
 # 🔐 Load environment variables from .env
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
-#Assign key to openai client
+openai_api_key = os.getenv("OPENAI_API_KEY")
 openai.api_key = openai_api_key
-
 # === Load semantic model ===
 @st.cache_resource
 def load_model():
