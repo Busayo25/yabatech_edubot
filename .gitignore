@@ -1,0 +1,12 @@
+# Ignore environment variables file
+.env
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore model or vectorizer files if any
+*.pkl
+
+# Ignore other unnecessary files
+*.pyc
+.DS_Store
