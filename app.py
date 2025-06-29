@@ -1,20 +1,53 @@
 import streamlit as st
-from chatbot import get_response
+import json
+from sentence_transformers import SentenceTransformer, util
+import torch
 
-st.set_page_config(page_title="YabatechEdubot", page_icon="🤖")
+# Load the model once and cache it
+@st.cache_resource
+def load_model():
+    return SentenceTransformer('all-MiniLM-L6-v2')
 
-st.title("YabatechEdubot 🤖")
-st.markdown("Ask me anything about Yabatech!")
+model = load_model()
 
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = []
+# Load intents from the JSON file
+@st.cache_data
+def load_intents():
+    with open("intents.json") as f:
+        return json.load(f)
 
-user_input = st.text_input("You:", "")
+data = load_intents()
+
+# Prepare patterns and responses lists
+patterns = []
+responses = []
+
+for intent in data["intents"]:
+    for pattern in intent["patterns"]:
+        patterns.append(pattern)
+        responses.append(intent["responses"][0])
+
+# Encode patterns once
+pattern_embeddings = model.encode(patterns, convert_to_tensor=True)
+
+def get_response(user_input, threshold=0.55):
+    user_embedding = model.encode(user_input, convert_to_tensor=True)
+    cosine_scores = util.pytorch_cos_sim(user_embedding, pattern_embeddings)
+    best_idx = torch.argmax(cosine_scores)
+    best_score = cosine_scores[0][best_idx].item()
+
+    if best_score >= threshold:
+        return responses[best_idx]
+    else:
+        return "Sorry, I didn't understand that. Could you please rephrase?"
+
+# Streamlit App Interface
+st.set_page_config(page_title="YabatechEduBot", page_icon="🤖")
+st.title("🤖 YabatechEduBot")
+st.write("Ask me anything about applying, courses, greetings, and more!")
+
+user_input = st.text_input("Type your question:")
 
 if user_input:
-    response = get_response(user_input)
-    st.session_state.chat_history.append(("You", user_input))
-    st.session_state.chat_history.append(("Bot", response))
-
-for sender, msg in st.session_state.chat_history:
-    st.markdown(f"**{sender}:** {msg}")
+    answer = get_response(user_input)
+    st.success(answer)
